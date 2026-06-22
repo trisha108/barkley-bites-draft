@@ -47,7 +47,7 @@ unlocks personalised recommendations for their dog. Do not push it.
       ? recentOrders
           .map(
             (o) =>
-              `  - Order ${o.orderNumber} (${o.status}): ${o.items.map((i) => `${i.quantity}x ${i.name}`).join(", ")} — $${o.total}`,
+              `  - Order ${o.orderNumber} (${o.status}): ${o.items.map((i: { quantity: number; name: string }) => `${i.quantity}x ${i.name}`).join(", ")} — $${o.total}`,
           )
           .join("\n")
       : "  No orders yet.";
