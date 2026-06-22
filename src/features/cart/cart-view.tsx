@@ -12,8 +12,6 @@ import { formatMoney } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  selectActiveCartLines,
-  selectSavedLines,
   useBarkleyStore,
 } from "@/store/use-store";
 import { toast } from "sonner";

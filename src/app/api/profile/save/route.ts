@@ -101,7 +101,7 @@ export async function GET() {
 
   try {
     await connectDB();
-    const user = await UserModel.findById(session.user.id).lean();
+    const user = await UserModel.findById(session.user.id).lean() as any;
     return NextResponse.json({ profile: user?.profile ?? null });
   } catch (err) {
     console.error("[api/profile/save GET]", err);
