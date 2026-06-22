@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 25 35% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 35% 18%;
+    --primary: 142 24% 25%;
+    --primary-foreground: 40 33% 98%;
+    --secondary: 35 28% 90%;
+    --secondary-foreground: 25 35% 22%;
+    --muted: 140 12% 94%;
+    --muted-foreground: 25 12% 42%;
+    --accent: 32 35% 64%;
+    --accent-foreground: 25 35% 18%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 35 18% 88%;
+    --input: 35 18% 88%;
+    --ring: 142 24% 35%;
+    --radius: 0.85rem;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 35% 18%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-barkley-cream text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::selection {
+    @apply bg-barkley-sage/30 text-barkley-cocoa;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-soft;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hero-swiper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.45);
+    opacity: 1;
+  }
+
+  .hero-swiper .swiper-pagination-bullet-active {
+    background: #fff;
+  }
+}
